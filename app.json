@@ -21,23 +21,27 @@
             "required": true
         },
         "SESSION_STRING": {
-            "description": "A valid Pyrogram session name",
+            "description": "A valid Pyrogram session string",
             "required": true
         },
         "BOT_LIST": {
-            "description": "Your bot username list without '@' (Example: pratheek1bot pratheek2bot pratheek3bot)",
+            "description": "Your bot username list without '@' (Example: teletips1bot teletips2bot teletips3bot)",
             "required": true
         },
-       "CHANNEL_OR_GROUP_ID": {
-            "description": "Your channel's or group's Telegram id (Example: -1002055437866)",
+       "CHANNEL_ID": {
+            "description": "Your channel's or group's Telegram id (Example: -1001246808642)",
             "required": true
         },
+       "GRP_ID":{
+            "description": "Your Group Id To Send Warnings.",
+            "required": true
+       },
        "MESSAGE_ID": {
-            "description": "Telegram id of message from your channel or group (Example: 10) Need Help Then Contact @Pratheek06",
+            "description": "Telegram id of message from your channel or group (Example: 10)",
             "required": true
         },
         "BOT_ADMIN_IDS": {
-            "description": "Bot admin(s) id(s) (Example: 1356107531 2460197531 3579864241)"
+            "description": "Bot admin(s) id(s) (Example: 1357907531 2468097531 3579864213)"
         },
         "TIME_ZONE": {
             "description": "Your time zone (Example: Asia/Kolkata)",
@@ -50,16 +54,9 @@
       "size": "eco"
     }
   },
-  "buildpacks": [
-          {
-              "url": "heroku/python"
-          },
-          {
-              "url": "heroku/nodejs"
-          },
-          {
-              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-          }
-    
-      "stack": "container"
-  }
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
